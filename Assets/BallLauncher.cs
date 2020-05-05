@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BallLauncher : MonoBehaviour
 {
-    public Rigidbody ball;
+    // public Rigidbody ball;
+    public SquishImpact ball_squish;
 
     public float launchSpeed = 5f;
     public bool ballInHand = true;
@@ -13,17 +14,14 @@ public class BallLauncher : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             if (ballInHand) {
-                ball.transform.SetParent(null);
-                ball.velocity = transform.forward * launchSpeed;
-                ball.isKinematic = false;
-                ball.useGravity = true;
+                ball_squish.transform.SetParent(null);
+                ball_squish.SetHeld(false);
+                ball_squish.rigidbody.velocity = transform.forward * launchSpeed;
                 ballInHand = false;
             } else {
-                ball.transform.SetParent(transform);
-                ball.transform.position = transform.position;
-                ball.velocity = Vector3.zero;
-                ball.isKinematic = true;
-                ball.useGravity = false;
+                ball_squish.SetHeld(true);
+                ball_squish.transform.SetParent(transform);
+                ball_squish.transform.position = transform.position;
                 ballInHand = true;
             }
         }   

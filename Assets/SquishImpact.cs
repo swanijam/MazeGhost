@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SquishImpact : MonoBehaviour
 {
+    public bool heldInHand;
     public Rigidbody rigidbody;
     public float radius = .5f;
     public float exitBuffer = .1f;
@@ -22,12 +23,28 @@ public class SquishImpact : MonoBehaviour
         
     }
 
+    public void SetHeld(bool held) {
+        heldInHand = held;
+            stretchTransform.localScale = Vector3.one;
+        if (heldInHand) {
+            rigidbody.velocity = Vector3.zero;
+            // stretchTransform.localScale = Vector3.one;
+            rigidbody.isKinematic = true;
+            rigidbody.useGravity = false;
+            StopAllCoroutines();
+        } else {
+            // stretchTransform.localScale = Vector3.one;
+            rigidbody.isKinematic = false;
+            rigidbody.useGravity = true;
+        }
+    }
     Vector3 lastFrameVelocity;
     // Update is called once per frame
     bool squishing = false;
     public float maxVelocity = 0;
     void Update()
     {
+        if (heldInHand) return;
         Vector3 acceleration = rigidbody.velocity - lastFrameVelocity;
         if (!squishing) transform.rotation = Quaternion.LookRotation((flipOnImpact && flip ? -1 : 1) * rigidbody.velocity);
         stretchTarget = Mathf.InverseLerp(velocityMagnitudeRange.x, velocityMagnitudeRange.y, rigidbody.velocity.magnitude);
@@ -39,6 +56,7 @@ public class SquishImpact : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
+        if (heldInHand) return;
         stretch = 0f;
         if (lastFrameVelocity.magnitude < velocityThreshold) return;
         Instantiate(onHitEffect, other.GetContact(0).point, Quaternion.LookRotation(other.GetContact(0).normal));
