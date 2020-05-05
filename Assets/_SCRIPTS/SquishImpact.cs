@@ -49,7 +49,7 @@ public class SquishImpact : MonoBehaviour
         if (!squishing) transform.rotation = Quaternion.LookRotation((flipOnImpact && flip ? -1 : 1) * rigidbody.velocity);
         stretchTarget = Mathf.InverseLerp(velocityMagnitudeRange.x, velocityMagnitudeRange.y, rigidbody.velocity.magnitude);
         stretch = Mathf.Lerp(stretch, stretchTarget, .98f);
-        if (!squishing) stretchTransform.localScale = new Vector3(1f, 1f, 1f+stretch*stretchFactor);
+        if (!squishing) stretchTransform.localScale = new Vector3(1f, 1f, 1f+rigidbody.velocity.magnitude*stretchFactor);
 
         lastFrameVelocity = rigidbody.velocity;
         if (lastFrameVelocity.magnitude > maxVelocity) maxVelocity = lastFrameVelocity.magnitude;
