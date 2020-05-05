@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleMoveController : MonoBehaviour
 {
     public float moveSpeed = 1f;
+    public Transform directionRefTransform;
     // Update is called once per frame
     void Update()
     {
@@ -16,16 +17,16 @@ public class SimpleMoveController : MonoBehaviour
     public Vector3 GetInputDirection() {
         Vector3 direction = Vector3.zero;
         if (Input.GetKey(KeyCode.W)) {
-            direction += transform.forward;
+            direction += directionRefTransform.forward;
         }
         if (Input.GetKey(KeyCode.A)) {
-            direction -= transform.right;
+            direction -= directionRefTransform.right;
         }
         if (Input.GetKey(KeyCode.S)) {
-            direction -= transform.forward;
+            direction -= directionRefTransform.forward;
         }
         if (Input.GetKey(KeyCode.D)) {
-            direction += transform.right;
+            direction += directionRefTransform.right;
         }
         direction = Vector3.ProjectOnPlane(direction, Vector3.up);
         if (Input.GetKey(KeyCode.Space)) {

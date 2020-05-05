@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Keijiro.meta
 guid: da1b2ddfac7076840a39dbf96329c12c
+=======
+guid: da0d50df7f432a0418803e3deac2639d
+>>>>>>> 09e67f6d18edb59dead2f7e4c11c0d1628cbd1e6:Assets/BadDog/ForwardSSRWater_Common.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

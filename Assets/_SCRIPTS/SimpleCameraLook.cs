@@ -12,18 +12,10 @@ public class SimpleCameraLook : MonoBehaviour
     bool cursorLocked = false;
     private void Start()
     {
-        ToggleCursorLock();
     }
-    public void ToggleCursorLock() {
-        cursorLocked = !cursorLocked;
-        Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
-        Cursor.visible = !cursorLocked;
-    }
+    
     void Update()
     {
-        if (Input.GetMouseButtonDown(2)) { // middle mouse button toggle cursor lock
-            ToggleCursorLock();
-        }
 
         float inputX = Input.GetAxis("Mouse X");
         float inputY = Input.GetAxis("Mouse Y");

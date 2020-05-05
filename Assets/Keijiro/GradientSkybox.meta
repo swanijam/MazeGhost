@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Keijiro/GradientSkybox.meta
 guid: 6c1a785e0ee04d94182f3499e344f06b
+=======
+guid: 6755f3f2d9656c14dba8e9b80e6740e6
+>>>>>>> 09e67f6d18edb59dead2f7e4c11c0d1628cbd1e6:Assets/BadDog/ForwardSSRWater_Common/Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
