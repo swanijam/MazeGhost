@@ -7,6 +7,7 @@ public class WallContactGlow : MonoBehaviour
 {
     public MeshRenderer meshRenderer;
     public Color flashColor;
+    public float animTime;
     public AnimationCurve flashAnimCurve;
 
     private void Start() {
@@ -15,8 +16,11 @@ public class WallContactGlow : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        Debug.Log("WallHit");
-        meshRenderer.materials[0].SetColor("_BaseColor", Color.clear);
-        meshRenderer.materials[0].DOColor(flashColor, "_BaseColor", 2).SetEase(flashAnimCurve);
+        // Debug.Log("WallHit");
+        // meshRenderer.materials[0].SetColor("_BaseColor", Color.clear);
+        if(meshRenderer.materials[0].GetColor("_BaseColor").a == 0)
+        {
+            meshRenderer.materials[0].DOColor(flashColor, "_BaseColor", animTime).SetEase(flashAnimCurve);
+        }
     }
 }
