@@ -25,9 +25,10 @@ public class SquishImpact : MonoBehaviour
 
     public void SetHeld(bool held) {
         heldInHand = held;
-            stretchTransform.localScale = Vector3.one;
+        stretchTransform.localScale = Vector3.one;
         if (heldInHand) {
             rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
             // stretchTransform.localScale = Vector3.one;
             rigidbody.isKinematic = true;
             rigidbody.useGravity = false;
@@ -42,7 +43,7 @@ public class SquishImpact : MonoBehaviour
     // Update is called once per frame
     bool squishing = false;
     public float maxVelocity = 0;
-    void Update()
+    void FixedUpdate()
     {
         if (heldInHand) return;
         Vector3 acceleration = rigidbody.velocity - lastFrameVelocity;
