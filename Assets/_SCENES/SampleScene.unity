@@ -2519,6 +2519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball_squish: {fileID: 406973083}
+  ballTrail: {fileID: 0}
   launchSpeed: 13
   ballInHand: 1
 --- !u!1 &1197983300
