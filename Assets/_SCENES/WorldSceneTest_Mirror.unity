@@ -683,7 +683,7 @@ MonoBehaviour:
   flipOnImpact: 0
   onHitEffect: {fileID: 138691282}
   maxVelocity: 92.6136
-  lerpVal: 0.823348
+  lerpVal: 1
   squishCurve:
     serializedVersion: 2
     m_Curve:
@@ -949,6 +949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -1365,6 +1366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -1714,6 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -2299,14 +2302,14 @@ MonoBehaviour:
   RunForEveryXthFrame: 1
   CameraLODLevel: 0
   TextureLODLevel: 0
-  HDR: 0
+  HDR: 1
   MSAA: 0
-  DisablePixelLights: 0
+  DisablePixelLights: 1
   Shadow: 0
   Cull: 0
   CullDistance: 0
   TextureSize: 1
-  ManualSize: 773
+  ManualSize: 1282
   UseCameraClipPlane: 0
   ClipPlaneOffset: 0
   ReflectLayers:
@@ -2325,10 +2328,10 @@ MonoBehaviour:
   Shades:
   - ObjectToShade: {fileID: 866629214}
     MaterialToChange: {fileID: 2100000, guid: 2734e085342c14512aafedf9feeecae0, type: 2}
-  EnableFinalShader: 0
-  FinalShader: {fileID: 0}
+  EnableFinalShader: 1
+  FinalShader: {fileID: 4800000, guid: aefd3fa6a5a15a34fb8fd7341860b818, type: 3}
   EnableARMode: 0
-  Iterations: 3
+  Iterations: 2
   NeighbourPixels: 5
   BlockSize: 8
   RefractionTexture: {fileID: 0}
@@ -2522,6 +2525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -2810,6 +2814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -3031,6 +3036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -3232,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 4299527303685285514, guid: cad3a92cbd00c4648983810233694291,
         type: 3}
       propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4299527303685285515, guid: cad3a92cbd00c4648983810233694291,
         type: 3}
@@ -3596,6 +3602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
@@ -3832,6 +3839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 0}
   flashColor: {r: 0.5294118, g: 0.64705884, b: 0.627451, a: 0.12941177}
+  animTime: 0
   flashAnimCurve:
     serializedVersion: 2
     m_Curve:
